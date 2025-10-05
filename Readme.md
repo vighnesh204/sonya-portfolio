@@ -17,6 +17,10 @@ A modern, responsive portfolio website showcasing my work and skills as a Fronte
 - 📧 Contact Form
 - 🌙 Dark Theme Interface
 
+## 🌐 Live Demo
+
+🔗 **[View Live Portfolio](https://vighnesh204.github.io/sonya-portfolio/)**
+
 ## 📸 Screenshots
 
 ### Home View
