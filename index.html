@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vighnesh Prakash Borhade - Frontend Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 bg-gradient-to-r from-gray-900 via-gray-900 to-gray-800 bg-opacity-95 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    &lt;DevPortfolio/&gt;
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link hover:text-blue-500 transition-colors duration-300">Home</a>
+                        <a href="#about" class="nav-link hover:text-blue-500 transition-colors duration-300">About</a>
+                        <a href="#experience" class="nav-link hover:text-blue-500 transition-colors duration-300">Experience</a>
+                        <a href="#projects" class="nav-link hover:text-blue-500 transition-colors duration-300">Projects</a>
+                        <a href="#contact" class="nav-link hover:text-blue-500 transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-blue-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 hover:text-blue-500 transition-colors duration-300">Home</a>
+                <a href="#about" class="block px-3 py-2 hover:text-blue-500 transition-colors duration-300">About</a>
+                <a href="#experience" class="block px-3 py-2 hover:text-blue-500 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="block px-3 py-2 hover:text-blue-500 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="block px-3 py-2 hover:text-blue-500 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-16 hero-gradient">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Text Content -->
+                <div class="hero-text">
+                    <h1 class="text-5xl md:text-6xl lg:text-6xl font-bold mb-4">
+                        Hi, I'm <br><span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent text-6xl">Vighnesh Prakash Borhade</span>
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-gray-400 mb-6 typing-text">
+                        Frontend Developer
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-500 mb-8 max-w-xl">
+                        Crafting beautiful, responsive, and user-friendly web experiences with modern technologies.
+                    </p>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#projects" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="inline-block border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Profile Image -->
+                <div class="hero-image flex justify-center md:justify-end">
+                    <div class="relative">
+                        <!-- Glowing effect behind image -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                        <!-- Image placeholder -->
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 shadow-2xl">
+                            <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+                                <!-- Replace with your actual image -->
+                                <img src="./assets/sonya.jpg" 
+                                     alt="Profile Picture" 
+                                     class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 about-gradient">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- About Text -->
+                <div class="fade-in">
+                    <p class="text-gray-400 text-lg mb-6">
+                        I'm a passionate Frontend Developer with a keen eye for design and a love for creating seamless user experiences. With expertise in modern web technologies, I transform ideas into interactive and visually appealing websites.
+                    </p>
+                    <p class="text-gray-400 text-lg">
+                        I enjoy staying up-to-date with the latest trends in web development and continuously improving my skills to deliver high-quality solutions.
+                    </p>
+                </div>
+                
+                <!-- Skills -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">My Skills</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-semibold">HTML5</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>
+                            <p class="font-semibold">CSS3</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fab fa-js text-3xl text-yellow-400 mb-2"></i>
+                            <p class="font-semibold">JavaScript</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fab fa-react text-3xl text-cyan-400 mb-2"></i>
+                            <p class="font-semibold">React</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fab fa-java text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-semibold">Java</p>
+                        </div>
+                        <div class="skill-card bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg hover:from-gray-750 hover:to-gray-800 transition-all duration-300 border border-gray-700">
+                            <i class="fas fa-wind text-3xl text-teal-400 mb-2"></i>
+                            <p class="font-semibold">Tailwind CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 experience-gradient">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Work Experience</h2>
+            
+            <div class="space-y-8">
+                <!-- Experience Card 1 -->
+                <div class="experience-card fade-in bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6 md:p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-500"></div>
+                    
+                    <div class="ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Associate Software Trainee</h3>
+                                <p class="text-lg text-blue-400">Tidbeat</p>
+                            </div>
+                            <div class="text-gray-400 mt-2 md:mt-0">
+                                <i class="far fa-calendar-alt mr-2"></i>Jan 2025 - April 2025
+                            </div>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed">
+                            Contributed to developing and enhancing responsive web applications using React, TypeScript, and Material UI. Collaborated with the team to fix bugs, implement new features, and ensure a smooth user experience.
+                        </p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full">TypeScript</span>
+                            <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-3 py-1 rounded-full">Tailwind CSS</span>
+                            <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full">Material UI</span>
+                            <span class="text-xs bg-violet-500 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full">Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Card 2 -->
+                <div class="experience-card fade-in bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6 md:p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-purple-500 to-pink-500"></div>
+                    
+                    <div class="ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Software Developer Intern</h3>
+                                <p class="text-lg text-purple-400">Cravita Technologies</p>
+                            </div>
+                            <div class="text-gray-400 mt-2 md:mt-0">
+                                <i class="far fa-calendar-alt mr-2"></i>2025 - Present
+                            </div>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed">
+                            Completed front-end development training in HTML, CSS, JavaScript, and Bootstrap. Currently learning Java Full Stack Development with focus on Spring Boot, React, and MySQL under industry mentorship.
+                        </p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="text-xs bg-green-500 bg-opacity-20 text-green-400 px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="text-xs bg-orange-500 bg-opacity-20 text-orange-400 px-3 py-1 rounded-full">Bootstrap</span>
+                            <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-3 py-1 rounded-full">Core Java</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Card 3 -->
+                <div class="experience-card fade-in bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-6 md:p-8 border border-gray-700 hover:border-teal-500 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-teal-500 to-cyan-500"></div>
+                    
+                    <div class="ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Freelance Frontend Developer</h3>
+                                <p class="text-lg text-teal-400">Self Employed</p>
+                            </div>
+                            <div class="text-gray-400 mt-2 md:mt-0">
+                                <i class="far fa-calendar-alt mr-2"></i>2024 - Present
+                            </div>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed">
+                            Developed 25+ frontend projects including responsive websites and interactive web applications. Built 4-5 production-ready projects using React and Tailwind CSS. Created various mini-projects focusing on specific functionalities like form validation, API integration, and dynamic UI components.
+                        </p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="text-xs bg-orange-500 bg-opacity-20 text-orange-400 px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="text-xs bg-cyan-500 bg-opacity-20 text-cyan-400 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-3 py-1 rounded-full">Tailwind CSS</span>
+                            <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-3 py-1 rounded-full">Bootstrap</span>
+                            <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full">Material UI</span>
+                            <span class="text-xs bg-violet-500 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full">Git/GitHub</span>
+                            <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-3 py-1 rounded-full">Core Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Marquee -->
+    <section id="projects" class="py-20 px-4 projects-gradient">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-in">My Projects</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                Here are some of my recent projects showcasing my skills in frontend development.
+            </p>
+            
+            <!-- Marquee Container -->
+            <div class="marquee-container overflow-hidden relative">
+                <div class="marquee-content flex gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/ap.png" 
+                                 alt="Anime Portfolio" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Anime Portfolio</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Anime themed portfolio with smooth animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JS</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">GSAP</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/anime-portfolio-clone/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/rc.png" 
+                                 alt="Refokus Clone" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Refokus Clone</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Agency website clone with GSAP animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-cyan-500 bg-opacity-20 text-cyan-400 px-2 py-1 rounded">React</span>
+                                <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-2 py-1 rounded">Tailwind</span>
+                                <span class="text-xs bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded">Framer Motion</span>
+                            </div>
+                            <a href="#" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-teal-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/obys.png" 
+                                 alt="Obys Clone" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Obys Agency Clone</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Creative portfolio with advanced animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-orange-500 bg-opacity-20 text-orange-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded">GSAP</span>
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+                            </div>
+                            <a href="#" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-orange-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/home.png" 
+                                 alt="Chillz" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Chillz</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Scroll-based animation showcase project.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">GSAP</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">ScrollTrigger</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/Chillz/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-orange-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/tomioka.png" 
+                                 alt="Rotating-Navigation" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Rotating-Navigation</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                               A rotating navigation menu with smooth transitions and 3D effects.
+
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">JavaScript</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/rotating-nav/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-violet-500 to-indigo-500 hover:from-violet-600 hover:to-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards for infinite loop -->
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/ap.png" 
+                                 alt="Anime Portfolio" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Anime Portfolio</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Anime themed portfolio with smooth animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JS</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">GSAP</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/anime-portfolio-clone/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/rc.png" 
+                                 alt="Refokus Clone" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Refokus Clone</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Agency website clone with GSAP animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-cyan-500 bg-opacity-20 text-cyan-400 px-2 py-1 rounded">React</span>
+                                <span class="text-xs bg-teal-500 bg-opacity-20 text-teal-400 px-2 py-1 rounded">Tailwind</span>
+                                <span class="text-xs bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded">Framer Motion</span>
+                            </div>
+                            <a href="#" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-teal-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/obys.png" 
+                                 alt="Obys Clone" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Obys Agency Clone</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Creative portfolio with advanced animations.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-orange-500 bg-opacity-20 text-orange-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-blue-500 bg-opacity-20 text-blue-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-green-500 bg-opacity-20 text-green-400 px-2 py-1 rounded">GSAP</span>
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+                            </div>
+                            <a href="#" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-orange-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/home.png" 
+                                 alt="Chillz" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Chillz</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                Scroll-based animation showcase project.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">GSAP</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">ScrollTrigger</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/Chillz/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                     <div class="project-card-small flex-shrink-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-orange-500 transition-all duration-300 group">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="./assets/tomioka.png" 
+                                 alt="Tomioka" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2 text-white">Rotating-Navigation</h3>
+                            <p class="text-gray-400 text-sm mb-3 line-clamp-2">
+                                A rotating navigation menu with smooth transitions and 3D effects.
+                            </p>
+                            <div class="flex gap-2 mb-3 flex-wrap">
+                                <span class="text-xs bg-yellow-500 bg-opacity-20 text-yellow-400 px-2 py-1 rounded">HTML</span>
+                                <span class="text-xs bg-purple-500 bg-opacity-20 text-purple-400 px-2 py-1 rounded">CSS</span>
+                                <span class="text-xs bg-pink-500 bg-opacity-20 text-pink-400 px-2 py-1 rounded">JavaScript</span>
+                            </div>
+                            <a href="https://vighnesh204.github.io/rotating-nav/" 
+                               target="_blank"
+                               class="block text-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 contact-gradient">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info & Social Links -->
+                <div class="fade-in">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Let's Connect</h3>
+                        <p class="text-gray-400 mb-6">
+                            Feel free to reach out for collaborations, opportunities, or just a friendly chat about web development!
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-500 text-xl w-8"></i>
+                                <span class="text-gray-400">your.email@example.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-blue-500 text-xl w-8"></i>
+                                <span class="text-gray-400">+91 97XXXXXXXX</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-500 text-xl w-8"></i>
+                                <span class="text-gray-400">Pune, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Follow Me</h3>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/vighnesh204/" target="_blank" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg flex items-center justify-center hover:border-blue-500 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg flex items-center justify-center hover:border-blue-500 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg flex items-center justify-center hover:border-blue-500 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg flex items-center justify-center hover:border-blue-500 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-codepen text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-gray-900 to-gray-800 py-8 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">
+                &copy; 2025 Vighnesh Prakash Borhade. All rights reserved. Built with passion using Tailwind CSS
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
